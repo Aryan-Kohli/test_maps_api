@@ -23,15 +23,15 @@ export default function CurrentLoc(props) {
     props.set_current(position.coords.latitude, position.coords.longitude);
   }
 
-  window.onload = (event) => {
-    console.log("page is fully loaded");
-    getLocation();
-  };
+  // window.onload = (event) => {
+  //   console.log("page is fully loaded");
+  //   getLocation();
+  // };
   return (
     <div>
-      {/* <p>Click to see you nearby results</p> */}
+      <p>Click to see you nearby results</p>
 
-      {/* <button onClick={getLocation}>Click Me </button> */}
+      <button onClick={getLocation}>Click Me </button>
 
       <p id="demo">{abcd}</p>
     </div>

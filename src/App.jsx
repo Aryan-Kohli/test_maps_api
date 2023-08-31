@@ -10,7 +10,7 @@ function App() {
   const [range, setRange] = useState(10.0);
   const loc = data.map((x) => {
     const dis = calculateDistance(latitude, longutide, x.latitude, x.longitude);
-    if (dis <= 10) {
+    if (dis <= 7) {
       // dis = dis.toFixed(3);
       return (
         <Card
