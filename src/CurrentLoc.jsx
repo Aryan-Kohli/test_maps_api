@@ -14,6 +14,7 @@ export default function CurrentLoc(props) {
   function showPosition(position) {
     // x.innerHTML =
     let ans =
+      "Your position is : " +
       "Latitude " +
       position.coords.latitude +
       "Longitude " +
@@ -21,11 +22,16 @@ export default function CurrentLoc(props) {
     Setabcd(ans);
     props.set_current(position.coords.latitude, position.coords.longitude);
   }
+
+  window.onload = (event) => {
+    console.log("page is fully loaded");
+    getLocation();
+  };
   return (
     <div>
-      <p>Click the button to get your coordinates.</p>
+      {/* <p>Click to see you nearby results</p> */}
 
-      <button onClick={getLocation}>Try It</button>
+      {/* <button onClick={getLocation}>Click Me </button> */}
 
       <p id="demo">{abcd}</p>
     </div>

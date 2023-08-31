@@ -7,6 +7,7 @@ import CurrentLoc from "./CurrentLoc";
 function App() {
   const [latitude, Setlatitude] = useState(0);
   const [longutide, Setlongitude] = useState(0);
+  const [range, setRange] = useState(10.0);
   const loc = data.map((x) => {
     const dis = calculateDistance(latitude, longutide, x.latitude, x.longitude);
     if (dis <= 10) {
@@ -51,7 +52,10 @@ function App() {
     <>
       <div className="container">
         <CurrentLoc set_current={set_current} />
-        <div className="row">{loc}</div>
+        <div className="row">
+          <h1>The following are the missing pets info near You</h1>
+          {loc}
+        </div>
       </div>
     </>
   );
