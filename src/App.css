@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    border: 2px solid red;
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+}
+
+.disp{
+    display:flex;
+    flex-direction: row;
+    /* align-items: ; */
+}
